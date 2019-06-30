@@ -1,0 +1,29 @@
+{
+  "name": "scheduler-ita",
+  "version": "1.0.0",
+  "description": "parser for sfedu ictis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyGulyaev/scheduler-ITA.git"
+  },
+  "keywords": [
+    "parser",
+    "ita",
+    "ictis"
+  ],
+  "author": "Evgeny Gulyaev (wardercompany@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvgenyGulyaev/scheduler-ITA/issues"
+  },
+  "homepage": "https://github.com/EvgenyGulyaev/scheduler-ITA#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0"
+  }
+}

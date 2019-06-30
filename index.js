@@ -25,7 +25,7 @@ const getElement = (element) => {
   } else {
     return {};
   }
-}
+};
 
 
 request(url, function (error, response, body) {
