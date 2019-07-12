@@ -3,11 +3,11 @@
 
 ## Установка 
 Используя npm:    
-`npm install scheduler-ITA --save`
+`npm install scheduler-ita --save`
 
 
 Используя yarn:     
-`yarn add scheduler-ITA`
+`yarn add scheduler-ita`
 
 ## Об типах страниц на данном сайт
 
