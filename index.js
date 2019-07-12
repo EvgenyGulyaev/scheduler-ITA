@@ -9,7 +9,17 @@ const
   _chunk = require('lodash.chunk');
 
 const getContent = (p) => {
-  const schedule = p.map(el => _get(el, 'children[0].children[0].data', ''));
+  const schedule = p.map(el => {
+    const data = _get(el, 'children[0]', {});
+    let value = _get(data, 'children[0].data', '');
+    if (!value) {
+      value = _get(data, 'data', '')
+    }
+    if (!value) {
+      value = _get(data, 'children[0].children[0].children[0].data', '')
+    }
+    return value
+  });
   return _chunk(schedule, 65)
 }
 
