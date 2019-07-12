@@ -1,6 +1,6 @@
 {
   "name": "scheduler-ita",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "parser for sfedu ictis",
   "main": "index.js",
   "scripts": {
