@@ -1,6 +1,6 @@
 {
   "name": "scheduler-ita",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "parser for sfedu ictis",
   "main": "index.js",
   "scripts": {
@@ -17,13 +17,16 @@
     "ictis"
   ],
   "author": "Evgeny Gulyaev (wardercompany@gmail.com)",
+  "readmeFilename": "README.md",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EvgenyGulyaev/scheduler-ITA/issues"
   },
   "homepage": "https://github.com/EvgenyGulyaev/scheduler-ITA#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
-    "request": "^2.88.0"
+    "lodash.chunk": "^4.2.0",
+    "lodash.get": "^4.4.2"
   }
 }
