@@ -16,7 +16,7 @@ const getContent = (p) => {
 const getNameId = ($, body) => {
   const startWeekAndName = $("p", body).first().text().split(':');
   const firstWeek = startWeekAndName[2].split('-')[0];
-  const name = startWeekAndName[1].split(' ')[0];
+  const name = startWeekAndName[1].split(' ')[1];
   return { name, firstWeek }
 }
 
