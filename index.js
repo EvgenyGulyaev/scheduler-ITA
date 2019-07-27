@@ -6,7 +6,9 @@ const
   htmlPreps = 'HTML_PREPS',
   _get = require('lodash.get'),
   axios = require('axios'),
-  _chunk = require('lodash.chunk');
+  _chunk = require('lodash.chunk'),
+  iconv = require('iconv-lite');
+
 
 const getContent = (p) => {
   const schedule = p.map(el => {
@@ -32,7 +34,14 @@ const getNameId = ($, body) => {
 
 const getDataForType = async (number, type = html) => {
   try {
-    const { data } = await axios.get(`${url}${type}/${number}.htm`);
+    let { data } = await axios.get(`${url}${type}/${number}.htm`, {
+      headers: {
+        "Content-Type": "text/html; charset=windows-1251"
+      },
+      responseType: 'arraybuffer'
+    });
+    data =  iconv.decode(data, 'windows-1251');
+
     const status = 'Ok';
     const $ = cheerio.load(data);
     const nameData = getNameId($, data);
@@ -44,7 +53,7 @@ const getDataForType = async (number, type = html) => {
     console.log('error', e);
     return { status: 'Bad' }
   }
-}
+};
 
 const getData = (number, type = html) => getDataForType(number, type);
 
